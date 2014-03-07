@@ -78,7 +78,8 @@ module.exports = function(grunt) {
     'gh-pages':{
       options: {
         base: 'dist'
-      }
+      },
+      src: ['**']
     },
 
     clean: {
@@ -123,6 +124,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-open');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('build', ['stylus', 'copy']);
   grunt.registerTask('default', ['watch']);
